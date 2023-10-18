@@ -1,5 +1,4 @@
 import { Links, Meta, Outlet, Scripts, LiveReload } from "@remix-run/react";
-import { InitialView } from "./components/InitialView";
 export default function App() {
   return (
     <html>
@@ -9,7 +8,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <InitialView />
         <Outlet />
         <Scripts />
         <LiveReload />
