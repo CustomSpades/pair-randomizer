@@ -17,14 +17,14 @@ const NamesCollectionForm = ({ collect }) => {
           <form onSubmit={handleSubmit}>
             {nameIds.map((fieldId) => (
               <div key={fieldId}>
-                <Field name={fieldId} component="input" placeholder="vardas" />
+                <Field name={fieldId} component="input" placeholder="vardas" className="mt-2 flex h-12 items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200"/>
                 <button
                   onClick={() => {
                     setNameIds(nameIds.filter((id) => id !== fieldId));
                     resetFieldState(fieldId);
                   }}
                 >
-                  x
+                  istrinti
                 </button>
               </div>
             ))}
@@ -36,12 +36,12 @@ const NamesCollectionForm = ({ collect }) => {
                   e.stopPropagation();
                   setNameIds((ids) => [...ids, uuidv4()]);
                 }}
-              >
+              className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200" >
                 Prideti dar viena varda
               </button>
             </div>
             <div>
-              <button type="submit">Isvardinti poras</button>
+              <button type="submit" className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">Isvardinti poras</button>
             </div>
           </form>
         )}
@@ -124,7 +124,7 @@ const RulesCollection = ({ data }) => {
           <br />
         </div>
       ))}
-      <button
+      <button className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200"
         onClick={() => {
           setPairs(generatePairs(config));
         }}
